@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>UnboundID - Recover Username</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/ubid-account.css" rel="stylesheet">
+		<link href="assets/img/unboundid-u-transparent-16x16.ico" rel="shortcut icon">
+	</head>
+	<body onload="document.f.j_username.focus();" class="default-body">
+		<div class="container">	
+			<div class="row">
+				<div class="hidden-xs visible-sm visible-lg visible-md" style="padding-top: 68px; display: none"></div>
+				<div class="visible-xs" style="padding-top: 46px; display: none"></div>
+				<div style="display: none;">
+					<div class="pull-left"><div class="square"></div><a herf="#" class="close">x</a> </div>
+					<div class="login-header">
+						<img src="assets/img/bizco.png" alt="UnboundID Logo">
+					</div>
+					<div class="login-header-tablet">
+						<img src="assets/img/bizco_large.png" alt="UnboundID Logo">
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="login-div">
+						<div id="alerts_panel">
+							<noscript>
+								&lt;div class="alert fade in alert-danger"&gt;
+								&lt;div class="message"&gt;
+								This application requires JavaScript.  Here are &lt;a href="http://www.enable-javascript.com/" target="_blank"&gt; instructions to enable JavaScript in your web browser&lt;/a&gt;.
+								&lt;/div&gt;
+								&lt;/div&gt;
+							</noscript>
+							<div class="login-container">
+								<div class="row login-row">
+								<div class="login-form">
+									<h2>Enter Account Information</h2>
+									<h5>To start the process of changing your username, enter the email address or phone number associated with your account.</h5>
+									<form name="f" action="login.html" method="POST" role="form" autocomplete="off">
+										<div class="form-group">
+											<label for="input01" class="control-label">Account Information <span class="required"></span></label>
+											<input type="text" class="form-control input-sm" id="input01" name="j_code" placeholder="Email or Phone Number" tabindex="1" value="">
+										</div>
+										<div class="form-group" style="margin-top:-5px">
+											<input name="submit" class="btn btn-primary btn-sm" type="submit" value="Continue" tabindex="3">
+										</div>
+									</form>
+								</div>
+								</div>
+							</div>         
+						</div>
+					</div>
+				</div>
+			</div>			
+			<div class="login-footer">
+				<div class="footer-contents">
+					Powered by <img src="assets/img/unboundid_logo.png" style="border: 0">
+				</div>
+			</div>
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/changebg.js"></script>
+	</body>
+</html>
