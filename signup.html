@@ -9,20 +9,9 @@
 		<link href="assets/css/ubid-account.css" rel="stylesheet">
 		<link href="assets/img/unboundid-u-transparent-16x16.ico" rel="shortcut icon">
 	</head>
-	<body onload="document.f.j_username.focus();" class="default-body">
+	<body onload="document.form1.j_username.focus();" class="default-body">
 		<div class="container">	
 			<div class="row">
-				<div class="hidden-xs visible-sm visible-lg visible-md" style="padding-top: 68px; display: none"></div>
-				<div class="visible-xs" style="padding-top: 46px; display: none"></div>
-				<div style="display: none;">
-					<div class="pull-left"><div class="square"></div><a herf="#" class="close">x</a> </div>
-					<div class="login-header">
-						<img src="assets/img/bizco.png" alt="UnboundID Logo">
-					</div>
-					<div class="login-header-tablet">
-						<img src="assets/img/bizco_large.png" alt="UnboundID Logo">
-					</div>
-				</div>
 				<div class="col-md-12">
 					<div class="login-div">
 						<div id="alerts_panel">
@@ -37,35 +26,29 @@
 								<div class="row login-row">
 								<div class="login-form">
 									<h2>Create an Account</h2>
-									<form name="f" action="login.html" method="POST" role="form" autocomplete="off">
+									<form name="form1" method="POST" action="" autocomplete="off">
 										<div class="form-group">
-											<label for="input01" class="control-label">Username <span class="required"></span></label>
-											<input type="text" class="form-control input-sm" id="input01" name="j_username" placeholder="Username" tabindex="1" value="">
-										</div>
-										<div class="form-group">
-											<label for="input02" class="control-label">Name <span class="required"></span></label>
-											<input type="text" class="form-control input-sm bottom10" id="input02" name="j_firstname" placeholder="First/Given Name" tabindex="2" autocomplete="off">
-											<input type="text" class="form-control input-sm bottom10" id="input03" name="j_lastname" placeholder="Last/Family Name" tabindex="3" autocomplete="off">
-											<input type="text" class="form-control input-sm" id="input04" name="j_formatedname" placeholder="Full/Formated Name" tabindex="4" autocomplete="off">
-										</div>
-										<div class="form-group">
-											<label for="input05" class="control-label">Create Password <span class="required"></span></label>
-											<input type="text" class="form-control input-sm" id="input05" name="j_password" placeholder="New Password" tabindex="5" autocomplete="off">
-										</div>
-										<div class="form-group">
-											<label for="input05" class="control-label">Confirm Password <span class="required"></span></label>
-											<input type="text" class="form-control input-sm" id="input06" name="j_confirmpassword" placeholder="Confirm New Password" tabindex="6" autocomplete="off">
-										</div>
-										<div class="form-group">
-											<label for="input05" class="control-label">Email</label>
-											<input type="text" class="form-control input-sm" id="input07" name="j_email" placeholder="Email Address to Recover Account" tabindex="7">
-										</div>
-										<div class="form-group">
-											<label for="input05" class="control-label">Mobile Phone Number</label>
-											<input type="text" class="form-control input-sm" id="input08" name="j_phone" placeholder="Mobile Number to Recover Account" tabindex="8">
+										
+											<input type="text" class="form-control input-sm bottom10" id="input01" name="j_username" placeholder="Username *" tabindex="1" value="" data-validation="required">
+										
+											<input type="text" class="form-control input-sm bottom10" id="input02" name="j_firstname" placeholder="First/Given Name *" tabindex="2" autocomplete="off" data-validation="required">
+										
+											<input type="text" class="form-control input-sm bottom10" id="input03" name="j_lastname" placeholder="Last/Family Name *" tabindex="3" autocomplete="off" data-validation="required">
+										
+											<input type="text" class="form-control input-sm bottom10" id="input04" name="j_formatedname" placeholder="Full/Formated Name *" tabindex="4" autocomplete="off" data-validation="required">
+										
+											<input type="password" class="form-control input-sm bottom10" id="input05" name="j_password" placeholder="New Password *" tabindex="5" autocomplete="off" data-validation="length" data-validation-length="min8" >
+										
+											<input type="password" class="form-control input-sm bottom10" id="input06" name="j_password_confirmation" placeholder="Confirm New Password *" tabindex="6" autocomplete="off" data-validation="length" data-validation-length="min8"> 
+										
+											<input type="text" class="form-control input-sm bottom10" id="input07" name="j_email" placeholder="Email Address to Recover Account" tabindex="7">
+											
+											<input type="text" class="form-control input-sm bottom10" id="input08" name="j_phone" placeholder="Mobile Number to Recover Account" tabindex="8">
+
+											<label class="control-label">* Mandatory Fields</label>
 										</div>
 										<div class="form-group" style="margin-top:-5px">
-											<input name="submit" class="btn btn-primary btn-sm" type="submit" value="Create Account" tabindex="3">
+											<input name="submit" class="btn btn-primary btn-sm" type="submit" value="Create Account" tabindex="9">
 										</div>
 									</form>
 								</div>
@@ -100,7 +83,21 @@
 		</div>
 
 		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/bootstrap.min.js"></script>
 		<script src="assets/js/changebg.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.form-validator.min.js"></script>
+  
+		<script>
+			var $messages = $('#error-message-wrapper');
+
+			$.validate({
+				validateOnBlur: true,
+				errorMessagePosition: $messages,
+				scrollToTopOnError : false
+			});
+			$(document).ready(function() {  
+			 	
+			    
+			});
+		</script>
 	</body>
 </html>

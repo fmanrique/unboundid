@@ -2,7 +2,7 @@
 <html>
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>UnboundID - Recover Username</title>
+		<title>UnboundID - Change Password</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -24,18 +24,15 @@
 							</noscript>
 							<div class="login-container">
 								<div class="row login-row">
-								<div class="login-form">
-									<h2>Enter Account Information</h2>
-									<h5>To start the process of changing your username, enter the email address or phone number associated with your account.</h5>
-									<form name="f" action="login.html" method="POST" role="form" autocomplete="off">
-										<div class="form-group">
-											<input type="text" class="form-control input-sm" id="input01" name="j_code" placeholder="Email or Phone Number" tabindex="1" value="" data-validation="required">
-										</div>
-										<div class="form-group" style="margin-top:-5px">
-											<input name="submit" class="btn btn-primary btn-sm" type="submit" value="Continue" tabindex="3">
-										</div>
-									</form>
-								</div>
+									<div class="login-form">
+										<h2>Account Creation Succesful</h2>
+										<h5>You have sucessfully created and account and can now sign in. Welcome NewUser!</h5>
+										<form name="f" action="login.html" method="POST" role="form" autocomplete="off">
+											<div class="form-group" style="margin-top:-5px">
+												<input name="submit" class="btn btn-primary btn-sm" type="submit" value="Done" tabindex="1">
+											</div>
+										</form>
+									</div>
 								</div>
 							</div>         
 						</div>
@@ -50,21 +47,7 @@
 		</div>
 
 		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
 		<script src="assets/js/changebg.js"></script>
-		<script type="text/javascript" src="assets/js/jquery.form-validator.min.js"></script>
-  
-		<script>
-			var $messages = $('#error-message-wrapper');
-
-			$.validate({
-				validateOnBlur: true,
-				errorMessagePosition: $messages,
-				scrollToTopOnError : false
-			});
-			$(document).ready(function() {  
-			 	
-			    
-			});
-		</script>
 	</body>
 </html>

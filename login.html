@@ -12,17 +12,6 @@
 	<body onload="document.f.j_username.focus();" class="default-body">
 		<div class="container">	
 			<div class="row">
-				
-				
-				<div style="display: none;">
-					<div class="pull-left"><div class="square"></div><a herf="#" class="close">x</a> </div>
-					<div class="login-header">
-						<img src="assets/img/bizco.png" alt="UnboundID Logo">
-					</div>
-					<div class="login-header-tablet">
-						<img src="assets/img/bizco_large.png" alt="UnboundID Logo">
-					</div>
-				</div>
 				<div class="col-md-12">
 					<div class="login-div">
 						<div id="alerts_panel">
@@ -36,15 +25,13 @@
 							<div class="login-container">
 								<div class="row login-row">
 								<div class="login-form">
-									<form name="f" action="login.html" method="POST" role="form" autocomplete="off">
+									<form name="f" action="" method="POST" role="form" autocomplete="off">
 										<div class="form-group">
-											<label for="input01" class="control-label">Username </label>
-											<input type="text" class="form-control input-sm" id="input01" name="j_username" placeholder="Username" tabindex="1" value="">
+											<input type="text" class="form-control input-sm" id="input01" name="j_username" placeholder="Username" tabindex="1" value="" data-validation="required">
 											<div class="pull-right" style="margin-top:5px"> <a href="https://appdev.unboundid.net:10120/oauth/account/recover/username" tabindex="4">Forgot username?</a></div>
 										</div>
 										<div class="form-group">
-											<label for="input02" class="control-label">Password </label>
-											<input type="password" class="form-control input-sm" id="input02" name="j_password" placeholder="Password" tabindex="2" autocomplete="off">
+											<input type="password" class="form-control input-sm" id="input02" name="j_password" placeholder="Password" tabindex="2" autocomplete="off" data-validation="required">
 											<div class="pull-right" style="margin-top:5px"> <a href="https://appdev.unboundid.net:10120/oauth/account/recover/password" tabindex="5">Forgot password?</a></div>
 										</div>
 										<div class="form-group" style="margin-top:-5px">
@@ -83,7 +70,21 @@
 		</div>
 
 		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/bootstrap.min.js"></script>
 		<script src="assets/js/changebg.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.form-validator.min.js"></script>
+  
+		<script>
+			var $messages = $('#error-message-wrapper');
+
+			$.validate({
+				validateOnBlur: true,
+				errorMessagePosition: $messages,
+				scrollToTopOnError : false
+			});
+			$(document).ready(function() {  
+			 	
+			    
+			});
+		</script>
 	</body>
 </html>
